@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#background {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    zoom: 110%;
+}
+
+.pet-container {
+    position: relative;
+    text-align: center;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8); 
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-name-tag {
+    position: absolute;
+    top: -10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.pet {
+    width: 150px;
+    height: 150px;
+    image-rendering: pixelated;
+    margin-bottom: 20px;
+    animation: idle 1s infinite alternate;
+}
+
+@keyframes idle {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+
+.status-bar {
+    margin-bottom: 20px;
+}
+
+.status {
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #76c7c0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 0.5s;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #76c7c0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #66b2a8;
+}
+
